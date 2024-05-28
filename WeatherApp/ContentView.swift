@@ -17,7 +17,7 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text("Cupertino, CA Hello")
+                Text("Cupertino, CA Hello1")
                     .font(.system(size: 32, weight: .medium, design: .default))
                     .foregroundColor(.white)
                     .padding()
