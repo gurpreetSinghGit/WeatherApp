@@ -25,6 +25,11 @@
 		0AA6F7632C04788B006CF49A /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6F7622C04788B006CF49A /* WeatherAppTests.swift */; };
 		0AA6F76D2C04788B006CF49A /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6F76C2C04788B006CF49A /* WeatherAppUITests.swift */; };
 		0AA6F76F2C04788B006CF49A /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6F76E2C04788B006CF49A /* WeatherAppUITestsLaunchTests.swift */; };
+		0AACFD832C07004200A539B5 /* TernaryOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACFD822C07004200A539B5 /* TernaryOperators.swift */; };
+		0AACFD8A2C070DF600A539B5 /* CoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACFD892C070DF600A539B5 /* CoinsViewModel.swift */; };
+		0AACFD8E2C070E6100A539B5 /* CoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACFD8D2C070E6100A539B5 /* CoinsView.swift */; };
+		0AACFD912C0742D500A539B5 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACFD902C0742D500A539B5 /* CoinDataService.swift */; };
+		0AACFD932C075AFC00A539B5 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACFD922C075AFC00A539B5 /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		0AA6F7682C04788B006CF49A /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA6F76C2C04788B006CF49A /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		0AA6F76E2C04788B006CF49A /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AACFD822C07004200A539B5 /* TernaryOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TernaryOperators.swift; sourceTree = "<group>"; };
+		0AACFD892C070DF600A539B5 /* CoinsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewModel.swift; sourceTree = "<group>"; };
+		0AACFD8D2C070E6100A539B5 /* CoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsView.swift; sourceTree = "<group>"; };
+		0AACFD902C0742D500A539B5 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		0AACFD922C075AFC00A539B5 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,8 @@
 		0AA6F7502C047887006CF49A /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				0AACFD852C07094B00A539B5 /* AllCoins */,
+				0AACFD842C07088E00A539B5 /* networking */,
 				0AA6F7512C047887006CF49A /* WeatherAppApp.swift */,
 				0A9467922C05EF1700234032 /* SwiftUIViewState.swift */,
 				0A9467882C05C92800234032 /* ForEach.swift */,
@@ -131,6 +143,7 @@
 				0A9467902C05E8FD00234032 /* SwiftUIViewButtons.swift */,
 				0A9467942C05F26C00234032 /* ExtractedFunctions.swift */,
 				0A8636FC2C06E8E800F59568 /* ConditionalUI.swift */,
+				0AACFD822C07004200A539B5 /* TernaryOperators.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -158,6 +171,56 @@
 				0AA6F76E2C04788B006CF49A /* WeatherAppUITestsLaunchTests.swift */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		0AACFD842C07088E00A539B5 /* networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		0AACFD852C07094B00A539B5 /* AllCoins */ = {
+			isa = PBXGroup;
+			children = (
+				0AACFD8F2C0742AD00A539B5 /* Service */,
+				0AACFD882C07099200A539B5 /* ViewModel */,
+				0AACFD872C07098B00A539B5 /* View */,
+				0AACFD862C07095B00A539B5 /* Model */,
+			);
+			path = AllCoins;
+			sourceTree = "<group>";
+		};
+		0AACFD862C07095B00A539B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AACFD922C075AFC00A539B5 /* Coin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AACFD872C07098B00A539B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AACFD8D2C070E6100A539B5 /* CoinsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AACFD882C07099200A539B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0AACFD892C070DF600A539B5 /* CoinsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0AACFD8F2C0742AD00A539B5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0AACFD902C0742D500A539B5 /* CoinDataService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,18 +353,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AACFD932C075AFC00A539B5 /* Coin.swift in Sources */,
 				0A9467992C06039500234032 /* BindingStateView.swift in Sources */,
+				0AACFD8E2C070E6100A539B5 /* CoinsView.swift in Sources */,
+				0AACFD832C07004200A539B5 /* TernaryOperators.swift in Sources */,
 				0A9467972C05F65100234032 /* ExtractViews.swift in Sources */,
 				0A9467952C05F26C00234032 /* ExtractedFunctions.swift in Sources */,
 				0A9467912C05E8FD00234032 /* SwiftUIViewButtons.swift in Sources */,
 				0A9467892C05C92800234032 /* ForEach.swift in Sources */,
 				0AA6F7542C047887006CF49A /* ContentView.swift in Sources */,
 				0AA6F7522C047887006CF49A /* WeatherAppApp.swift in Sources */,
+				0AACFD912C0742D500A539B5 /* CoinDataService.swift in Sources */,
 				0A9467932C05EF1700234032 /* SwiftUIViewState.swift in Sources */,
 				0A94678B2C05CC4E00234032 /* ScrollView.swift in Sources */,
 				0A8636FD2C06E8E800F59568 /* ConditionalUI.swift in Sources */,
 				0A94678F2C05E61400234032 /* SafeArea.swift in Sources */,
 				0A94678D2C05D40C00234032 /* GridBootcamp.swift in Sources */,
+				0AACFD8A2C070DF600A539B5 /* CoinsViewModel.swift in Sources */,
 				0A9467872C05BC1900234032 /* Initializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
