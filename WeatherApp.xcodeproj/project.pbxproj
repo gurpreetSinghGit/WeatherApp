@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8636FD2C06E8E800F59568 /* ConditionalUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8636FC2C06E8E800F59568 /* ConditionalUI.swift */; };
+		0A9467872C05BC1900234032 /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467862C05BC1900234032 /* Initializer.swift */; };
+		0A9467892C05C92800234032 /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467882C05C92800234032 /* ForEach.swift */; };
+		0A94678B2C05CC4E00234032 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94678A2C05CC4E00234032 /* ScrollView.swift */; };
+		0A94678D2C05D40C00234032 /* GridBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94678C2C05D40C00234032 /* GridBootcamp.swift */; };
+		0A94678F2C05E61400234032 /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94678E2C05E61400234032 /* SafeArea.swift */; };
+		0A9467912C05E8FD00234032 /* SwiftUIViewButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467902C05E8FD00234032 /* SwiftUIViewButtons.swift */; };
+		0A9467932C05EF1700234032 /* SwiftUIViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467922C05EF1700234032 /* SwiftUIViewState.swift */; };
+		0A9467952C05F26C00234032 /* ExtractedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467942C05F26C00234032 /* ExtractedFunctions.swift */; };
+		0A9467972C05F65100234032 /* ExtractViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467962C05F65100234032 /* ExtractViews.swift */; };
+		0A9467992C06039500234032 /* BindingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467982C06039500234032 /* BindingStateView.swift */; };
 		0AA6F7522C047887006CF49A /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6F7512C047887006CF49A /* WeatherAppApp.swift */; };
 		0AA6F7542C047887006CF49A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6F7532C047887006CF49A /* ContentView.swift */; };
 		0AA6F7562C04788A006CF49A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6F7552C04788A006CF49A /* Assets.xcassets */; };
@@ -34,6 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A8636FC2C06E8E800F59568 /* ConditionalUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalUI.swift; sourceTree = "<group>"; };
+		0A9467862C05BC1900234032 /* Initializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
+		0A9467882C05C92800234032 /* ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
+		0A94678A2C05CC4E00234032 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		0A94678C2C05D40C00234032 /* GridBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBootcamp.swift; sourceTree = "<group>"; };
+		0A94678E2C05E61400234032 /* SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeArea.swift; sourceTree = "<group>"; };
+		0A9467902C05E8FD00234032 /* SwiftUIViewButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewButtons.swift; sourceTree = "<group>"; };
+		0A9467922C05EF1700234032 /* SwiftUIViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewState.swift; sourceTree = "<group>"; };
+		0A9467942C05F26C00234032 /* ExtractedFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractedFunctions.swift; sourceTree = "<group>"; };
+		0A9467962C05F65100234032 /* ExtractViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractViews.swift; sourceTree = "<group>"; };
+		0A9467982C06039500234032 /* BindingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingStateView.swift; sourceTree = "<group>"; };
 		0AA6F74E2C047887006CF49A /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA6F7512C047887006CF49A /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
 		0AA6F7532C047887006CF49A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,9 +117,20 @@
 			isa = PBXGroup;
 			children = (
 				0AA6F7512C047887006CF49A /* WeatherAppApp.swift */,
+				0A9467922C05EF1700234032 /* SwiftUIViewState.swift */,
+				0A9467882C05C92800234032 /* ForEach.swift */,
+				0A9467862C05BC1900234032 /* Initializer.swift */,
 				0AA6F7532C047887006CF49A /* ContentView.swift */,
+				0A9467962C05F65100234032 /* ExtractViews.swift */,
+				0A9467982C06039500234032 /* BindingStateView.swift */,
 				0AA6F7552C04788A006CF49A /* Assets.xcassets */,
 				0AA6F7572C04788A006CF49A /* Preview Content */,
+				0A94678A2C05CC4E00234032 /* ScrollView.swift */,
+				0A94678C2C05D40C00234032 /* GridBootcamp.swift */,
+				0A94678E2C05E61400234032 /* SafeArea.swift */,
+				0A9467902C05E8FD00234032 /* SwiftUIViewButtons.swift */,
+				0A9467942C05F26C00234032 /* ExtractedFunctions.swift */,
+				0A8636FC2C06E8E800F59568 /* ConditionalUI.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -257,8 +290,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9467992C06039500234032 /* BindingStateView.swift in Sources */,
+				0A9467972C05F65100234032 /* ExtractViews.swift in Sources */,
+				0A9467952C05F26C00234032 /* ExtractedFunctions.swift in Sources */,
+				0A9467912C05E8FD00234032 /* SwiftUIViewButtons.swift in Sources */,
+				0A9467892C05C92800234032 /* ForEach.swift in Sources */,
 				0AA6F7542C047887006CF49A /* ContentView.swift in Sources */,
 				0AA6F7522C047887006CF49A /* WeatherAppApp.swift in Sources */,
+				0A9467932C05EF1700234032 /* SwiftUIViewState.swift in Sources */,
+				0A94678B2C05CC4E00234032 /* ScrollView.swift in Sources */,
+				0A8636FD2C06E8E800F59568 /* ConditionalUI.swift in Sources */,
+				0A94678F2C05E61400234032 /* SafeArea.swift in Sources */,
+				0A94678D2C05D40C00234032 /* GridBootcamp.swift in Sources */,
+				0A9467872C05BC1900234032 /* Initializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
