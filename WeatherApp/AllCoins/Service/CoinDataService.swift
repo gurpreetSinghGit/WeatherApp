@@ -12,44 +12,65 @@ class CoinDataService
 
 {
     
+    private let urlString = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc"
+    
+   
+    func fetchCoinsAsync() async throws -> [Coin] {
+        guard let url = URL(string: urlString) else { return []}
+        
+        print("DEBUG: Call")
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let coins = try JSONDecoder().decode([Coin].self, from: data)
+            return coins
+        } catch {
+            print("DEBUG: Error \(error.localizedDescription)")
+            return []
+        }
+        
+    }
+}
+
+extension CoinDataService {
+    
     func fetchCoinsWithResult(completion: @escaping(Result<[Coin], CoinApiError>) -> Void) {
-        let urlString = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc"
-        
-        guard let url = URL(string: urlString) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            if let error = error {
-                completion(.failure(.unknownError(error: error)))
-                return
-            }
-            
-            
-            guard let httpResponse = response as? HTTPURLResponse else {
-                completion(.failure(.requestFailure(description: "Request Failed")))
-                return
-            }
-            
-            guard httpResponse.statusCode == 200 else {
-                completion(.failure(.invalidStatusCode(statusCode: httpResponse.statusCode)))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(.invalidData))
-                return
-            }
-            
-            do {
-                let coins = try JSONDecoder().decode([Coin].self,  from: data)
-                completion(.success(coins))
-            } catch {
-                print("DEBUG: Failed to decode with error \(error)")
-                completion(.failure(.jsonParsingFailure))
-            }
-           
-            
-        }.resume()
+    
+//        guard let url = URL(string: urlString) else { return }
+//        
+//        try await URLSession.shared.dataTask(with: url) { data, response, error in
+//            
+//            if let error = error {
+//                completion(.failure(.unknownError(error: error)))
+//                return
+//            }
+//            
+//            
+//            guard let httpResponse = response as? HTTPURLResponse else {
+//                completion(.failure(.requestFailure(description: "Request Failed")))
+//                return
+//            }
+//            
+//            guard httpResponse.statusCode == 200 else {
+//                completion(.failure(.invalidStatusCode(statusCode: httpResponse.statusCode)))
+//                return
+//            }
+//            
+//            guard let data = data else {
+//                completion(.failure(.invalidData))
+//                return
+//            }
+//            
+//            do {
+//                let coins = try JSONDecoder().decode([Coin].self,  from: data)
+//                completion(.success(coins))
+//            } catch {
+//                print("DEBUG: Failed to decode with error \(error)")
+//                completion(.failure(.jsonParsingFailure))
+//            }
+//           
+//            
+//        }.resume()
     }
     
     func fetchCoins(completion: @escaping([Coin]?, Error?) -> Void) {
@@ -75,6 +96,7 @@ class CoinDataService
             
         }.resume()
     }
+    
     
     func fetchPrice(coin: String, completion: @escaping(Double) -> Void) {
         
@@ -117,5 +139,4 @@ class CoinDataService
         }.resume()
     
     }
-    
 }
