@@ -14,18 +14,23 @@ struct CoinsView: View {
         
         List {
             ForEach(viewModel.coins) { coin in
-                HStack {
+                HStack(spacing: 12) {
                     Text("\(coin.marketCapRank)")
                         .foregroundColor(.gray)
                     
-                    VStack (alignment: .leading) {
+                    VStack (alignment: .leading, spacing: 4) {
                         Text(coin.name)
                             .fontWeight(.semibold)
                         
-                        Text(coin.symbol)
+                        Text(coin.symbol.uppercased())
                     }
                 }
                 .font(.footnote)
+            }
+        }
+        .overlay {
+            if let error = viewModel.errorMessage {
+                Text(error)
             }
         }
         

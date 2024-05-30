@@ -19,13 +19,31 @@ class CoinsViewModel : ObservableObject {
     
     init() {
         fetchPrice(coin: "bitcoin")
-        fetchCoins()
+      //  fetchCoins()
+        fetchCoinsWithResult()
     }
     
     func fetchCoins() {
-        service.fetchCoins { coins in
+        service.fetchCoins { coins, error in
             DispatchQueue.main.async {
-                self.coins = coins
+                if let error = error {
+                    self.errorMessage = error.localizedDescription
+                    return
+                }
+                
+                self.coins = coins ?? []
+            }
+        }
+    }
+    
+    func fetchCoinsWithResult() {
+        service.fetchCoinsWithResult { result in
+            switch result {
+                case .success(let coins):
+                    self.coins = coins
+                
+                case .failure(let error):
+                self.errorMessage = error.localizedDescription
             }
         }
     }

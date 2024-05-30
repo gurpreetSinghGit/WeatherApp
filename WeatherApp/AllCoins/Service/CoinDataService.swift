@@ -12,12 +12,58 @@ class CoinDataService
 
 {
     
-    func fetchCoins(completion: @escaping([Coin]) -> Void) {
+    func fetchCoinsWithResult(completion: @escaping(Result<[Coin], CoinApiError>) -> Void) {
         let urlString = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc"
         
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let error = error {
+                completion(.failure(.unknownError(error: error)))
+                return
+            }
+            
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(.requestFailure(description: "Request Failed")))
+                return
+            }
+            
+            guard httpResponse.statusCode == 200 else {
+                completion(.failure(.invalidStatusCode(statusCode: httpResponse.statusCode)))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
+            
+            do {
+                let coins = try JSONDecoder().decode([Coin].self,  from: data)
+                completion(.success(coins))
+            } catch {
+                print("DEBUG: Failed to decode with error \(error)")
+                completion(.failure(.jsonParsingFailure))
+            }
+           
+            
+        }.resume()
+    }
+    
+    func fetchCoins(completion: @escaping([Coin]?, Error?) -> Void) {
+        let urlString = "https://ap.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc"
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
             guard let data = data else { return }
             
             guard let coins = try? JSONDecoder().decode([Coin].self,  from: data) else {
@@ -25,10 +71,9 @@ class CoinDataService
                 return
             }
             
-            completion(coins)
+           completion(coins, nil)
             
         }.resume()
-        
     }
     
     func fetchPrice(coin: String, completion: @escaping(Double) -> Void) {
