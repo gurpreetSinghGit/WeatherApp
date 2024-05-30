@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A350ED42C0847FE0007BD2F /* CoinApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A350ED32C0847FE0007BD2F /* CoinApiError.swift */; };
 		0A8636FD2C06E8E800F59568 /* ConditionalUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8636FC2C06E8E800F59568 /* ConditionalUI.swift */; };
+		0A8B51D02C08882000934F87 /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B51CF2C08882000934F87 /* WeatherButton.swift */; };
 		0A9467872C05BC1900234032 /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467862C05BC1900234032 /* Initializer.swift */; };
 		0A9467892C05C92800234032 /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9467882C05C92800234032 /* ForEach.swift */; };
 		0A94678B2C05CC4E00234032 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94678A2C05CC4E00234032 /* ScrollView.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		0A350ED32C0847FE0007BD2F /* CoinApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinApiError.swift; sourceTree = "<group>"; };
 		0A8636FC2C06E8E800F59568 /* ConditionalUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalUI.swift; sourceTree = "<group>"; };
+		0A8B51CF2C08882000934F87 /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
 		0A9467862C05BC1900234032 /* Initializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
 		0A9467882C05C92800234032 /* ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
 		0A94678A2C05CC4E00234032 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				0A9467942C05F26C00234032 /* ExtractedFunctions.swift */,
 				0A8636FC2C06E8E800F59568 /* ConditionalUI.swift */,
 				0AACFD822C07004200A539B5 /* TernaryOperators.swift */,
+				0A8B51CF2C08882000934F87 /* WeatherButton.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				0AACFD912C0742D500A539B5 /* CoinDataService.swift in Sources */,
 				0A9467932C05EF1700234032 /* SwiftUIViewState.swift in Sources */,
 				0A94678B2C05CC4E00234032 /* ScrollView.swift in Sources */,
+				0A8B51D02C08882000934F87 /* WeatherButton.swift in Sources */,
 				0A8636FD2C06E8E800F59568 /* ConditionalUI.swift in Sources */,
 				0A94678F2C05E61400234032 /* SafeArea.swift in Sources */,
 				0A94678D2C05D40C00234032 /* GridBootcamp.swift in Sources */,
